@@ -1,43 +1,54 @@
 # debian-sid
 
-TODO: Enter one line description of the cookbook here.
-
 ## SCOPE
 
-TODO: Enter a description of the scope of this cookbook, if you
-need an example the [mysql](https://github.com/chef-cookbooks/mysql) cookbook
-is a good place to start.
+Convert the stable build of Debian 9 (Stretch) to Sid.
 
 ## Requirements
 
-TODO: Enter any requirements for the coobook.
+- Debian 9.x
 
 ## Dependancies
 
-TODO: Enter any other cookbooks or ruby libraries for this cookbook.
-
+- [apt](https://supermarket.chef.io/cookbooks/apt)
 ## Usage
 
-TODO: Enter specific useage instructions for this cookbook.
+- Run this against a Debian 9.x installation.
+- When completed run `apt-get dist-upgrade -y` and answer any issues.
+- `reboot` when completed.
+- Winning.
+
+**NOTE**: do to the constant moving target of Sid, there is cronjob that does
+a `apt-get update` every 6 hours. You will be required to do the
+`apt-get dist-upgrade -y` at your own cadence.
+
+I have also added [weechat](https://weechat.org/) as a package that will
+be installed. If you are using this and need help, you should run the
+following commands so you have access to irc.debian.org.
+
+```ini
+/server add debian irc.debian.org
+/connect debian
+/nick <yournick>
+/join #debian-next
+/join #debian
+```
 
 ## Testing
 
+The default `.kitchen.yml` has the `debian-9` by default, and can be tested
+via `kitchen test` with vagrant.
+
 For more details look at the [TESTING.md](./TESTING.md).
-
-TODO: Enter any specific instructions for Testing this cookbook.
-
-## Resources
-
-TODO: Document any [Custom Resources](https://docs.chef.io/custom_resources.html) that this cookbook may provide.
 
 ## License & Authors
 
 If you would like to see the detailed LICENCE click [here](./LICENCE).
 
-- Author:: The Authors <you@example.com>
+- Author:: JJ Asghar <jjasghar@gmail.com>
 
 ```text
-Copyright:: The Authors
+Copyright:: JJ Asghar 2017
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

@@ -1,0 +1,4 @@
+deb http://ftp.us.debian.org/debian sid main
+deb http://ftp.us.debian.org/debian buster main
+
+deb http://ftp.us.debian.org/debian sid main contrib non-free
