@@ -8,7 +8,7 @@ Convert the stable build of Debian 9 (Stretch) to Sid.
 
 - Debian 9.x
 
-## Dependancies
+## Dependencies
 
 - [apt](https://supermarket.chef.io/cookbooks/apt)
 ## Usage
@@ -20,7 +20,7 @@ Convert the stable build of Debian 9 (Stretch) to Sid.
 
 **NOTE**: do to the constant moving target of Sid, there is cronjob that does
 a `apt-get update` every 6 hours. You will be required to do the
-`apt-get dist-upgrade -y` at your own cadence.
+`apt-get dist-upgrade` at your own cadence.
 
 I have also added [weechat](https://weechat.org/) as a package that will
 be installed. If you are using this and need help, you should run the
