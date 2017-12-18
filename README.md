@@ -18,9 +18,9 @@ Convert the stable build of Debian 9 (Stretch) to Sid.
 - `reboot` when completed.
 - Winning.
 
-**NOTE**: do to the constant moving target of Sid, there is cronjob that does
+**NOTE**: Do to the constant moving target of Sid, there is cronjob that does
 a `apt-get update` every 6 hours. You will be required to do the
-`apt-get dist-upgrade` at your own cadence.
+`apt upgrade` at your own cadence.
 
 I have also added [weechat](https://weechat.org/) as a package that will
 be installed. If you are using this and need help, you should run the
